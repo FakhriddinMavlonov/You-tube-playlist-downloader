@@ -1,21 +1,15 @@
 #!/bin/bash
-
-# 1. Ma'lumotlar papkasini yaratish
 mkdir -p ./tg-data
 
-# 2. Local Serverni ishga tushirish
-echo "🚀 Local Server ishga tushmoqda..."
-./node_modules/.bin/telegram-bot-api \
+# 1. Telegram Serverni ishga tushirish
+telegram-bot-api \
     --api-id=33279940 \
     --api-hash=ebec3314c624540f0591ec66eb021ca0 \
     --local \
     --http-port=8081 \
     --dir=./tg-data &
 
-# 3. Server to'liq yonishi uchun kutish
-echo "⏳ Serverni kutmoqdamiz (20 soniya)..."
-sleep 20
+sleep 10
 
-# 4. Botni ishga tushirish
-echo "🤖 Bot ishga tushmoqda..."
+# 2. Botni ishga tushirish
 node bot.js
