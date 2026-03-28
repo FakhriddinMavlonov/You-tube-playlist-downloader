@@ -1,0 +1,13 @@
+{
+  "name": "yt-downloader-local-api",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "bash start.sh"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0",
+    "fs-extra": "^11.2.0",
+    "yt-dlp-exec": "^1.0.1",
+    "archiver": "^7.0.1"
+  }
+}
