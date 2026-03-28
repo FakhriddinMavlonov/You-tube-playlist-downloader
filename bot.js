@@ -168,3 +168,15 @@ async function downloadAndSend(chatId, videoId, current, total, isVideo) {
 }
 
 console.log("Bot Local Server rejimida ishga tushdi...");
+
+const http = require('http');
+const server = http.createServer((req, res) => {
+    res.writeHead(200);
+    res.end('Bot is running with Local API Server!');
+});
+
+// Render beradigan PORT yoki ixtiyoriy 10000-portda ishlaydi
+const PORT = process.env.PORT || 10000;
+server.listen(PORT, () => {
+    console.log(`Health check server is running on port ${PORT}`);
+});
