@@ -3,9 +3,9 @@
 # 1. Ma'lumotlar papkasini yaratish
 mkdir -p ./tg-data
 
-# 2. Local Serverni ishga tushirish (npx orqali)
+# 2. Local Serverni ishga tushirish
 echo "🚀 Local Server ishga tushmoqda..."
-npx @grammyjs/botapi-bin \
+./node_modules/.bin/telegram-bot-api \
     --api-id=33279940 \
     --api-hash=ebec3314c624540f0591ec66eb021ca0 \
     --local \
