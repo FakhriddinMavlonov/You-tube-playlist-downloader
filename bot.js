@@ -13,7 +13,7 @@ const token = '8376033041:AAGJgfPkGgHg_lx4ni3YhuY4va7HwlXEJjc';
 // MUHIM: Local server manzili (start.sh dagi port bilan bir xil bo'lishi kerak)
 const bot = new TelegramBot(token, { 
     polling: true,
-    baseApiUrl: "http://localhost:8081" 
+    baseApiUrl: "http://127.0.0.1:8081" 
 });
 
 const urlStore = new Map();
